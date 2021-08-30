@@ -25,11 +25,13 @@
     "webpack-dev-server": "^4.0.0"
   },
   "husky": {
-    "hooks" {
+    "hooks": {
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "npm run lint-fix"
+    "./src/**/*.{js , ts}": [
+      "npm run lint-fix"
+    ]
   }
 }
